@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="common.css">
+</head>
+
+<!-- bodyタグの中身をブログに貼り付けてください -->
+<body>
+	<div id="scroll-to-top">
+		<i class="fa fa-arrow-up"></i>
+	</div>
+	
+	<!-- jqueryをすでに読み込み済みの場合は以下の行は不要 -->
+	<script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+	
+	<!-- jqueryの読み込み箇所より下の行に下記を貼り付けてください -->
+	<script>
+	$(function() {
+    	$('#scroll-to-top').hide();
+    	$(window).scroll(function() {
+        	if ($(this).scrollTop()>1000) {
+            	$('#scroll-to-top').fadeIn();
+        	} else {
+            	$('#scroll-to-top').fadeOut();
+        	}
+    	});
+    	$('#scroll-to-top').click(function() {
+        	$('body').animate({
+            	scrollTop:0
+        	}, 500);
+        	return false;
+    	});
+	});
+</script>
+</body>
