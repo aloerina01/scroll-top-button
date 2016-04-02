@@ -10,12 +10,15 @@
     color: #fff;
     text-align: center;
     font-size: 20px;
-    opacity: 0.7;
-    transition: all 0.3s ease;
+    opacity: 1;
 }
 #scroll-to-top i {
     padding: 20px 0;
 }
 #scroll-to-top:hover {
     background-color: #EC407A;
+}
+
+.display-none {
+  display: none !important;
 }
